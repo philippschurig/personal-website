@@ -2,14 +2,13 @@ import { motion } from 'framer-motion'
 import { Element, Link } from 'react-scroll'
 
 import { styles } from '../styles'
+import { profile } from '../assets'
 
 const Hero = () => {
   return (
     <Element name="home" className="relative w-full h-screen mx-auto">
       <div className={`${styles.paddingX} absolute inset-0 max-w-7xl mx-auto flex flex-col justify-center items-center gap-5`}>
-        <div className="flex flex-row justify-center items-center mt-5">
-          <div className="w-1 sm:w-80 w-40 h-4 amber-gradient" />
-        </div>
+        <img src={profile} alt="profile" className="w-52 h-52 rounded-full profile" />
 
         <div className="text-center">
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, ich bin <span className="text-amber-500">Philipp</span></h1>

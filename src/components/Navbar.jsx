@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 
 import { styles } from '../styles'
@@ -34,8 +34,11 @@ const Navbar = ({...components}) => {
         <ul className="list-none hidden sm:flex flex-row gap-6">
           {navLinks.map((link) => (
             <li key={link.id}>
-              <Link activeClass="active" offset={-50} spy to={link.id}
-                    className='nav-link text-[18px] font-medium cursor-pointer ease-in-out duration-300'>
+              <Link activeClass="active"
+                    spy
+                    offset={-50}
+                    to={link.id}
+                    className='nav-link font-medium text-[18px] cursor-pointer ease-in-out duration-300'>
                 {link.title}
               </Link>
             </li>
