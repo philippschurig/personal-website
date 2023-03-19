@@ -7,11 +7,6 @@ const SocialBar = () => {
       <a href='https://twitter.com/philipp_schurig'
          target='_blank'
          className='hover:text-amber-500 ease-in-out duration-300'>
-        <FontAwesomeIcon icon={brands('facebook-f')} />
-      </a>
-      <a href='https://twitter.com/philipp_schurig'
-         target='_blank'
-         className='hover:text-amber-500 ease-in-out duration-300'>
         <FontAwesomeIcon icon={brands('twitter')} />
       </a>
       <a href='https://www.instagram.com/philipp_schurig/'
@@ -28,6 +23,11 @@ const SocialBar = () => {
          target='_blank'
          className='hover:text-amber-500 ease-in-out duration-300'>
         <FontAwesomeIcon icon={brands('linkedin')} />
+      </a>
+      <a href='https://github.com/philippschurig'
+         target='_blank'
+         className='hover:text-amber-500 ease-in-out duration-300'>
+        <FontAwesomeIcon icon={brands('github')} />
       </a>
     </div>
   )
