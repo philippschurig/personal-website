@@ -1,8 +1,4 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -20,19 +16,15 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import thinksurance from './company/thinksurance.png'
+import missyrockz from './company/missyrockz.png'
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 
 import profile from "./profile.png"
 
 export {
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
   menu,
   close,
   css,
@@ -48,9 +40,9 @@ export {
   tailwind,
   typescript,
   threejs,
+  thinksurance,
+  missyrockz,
   meta,
   shopify,
-  starbucks,
-  tesla,
   profile,
 };

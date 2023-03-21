@@ -1,10 +1,12 @@
 import React, { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 import { styles } from '../styles.js'
 import { SectionWrapper } from '../hoc'
-import { slideIn } from '../utils/motion.js'
+import { slideIn, textVariant, fadeIn } from '../utils/motion.js'
 
 const Contact = () => {
   const formRef = useRef()
@@ -61,30 +63,46 @@ const Contact = () => {
   }
 
   return (
-    <div className="xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-      <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
-                  className="flex flex-col w-full bg-black-200 p-8 rounded-2xl">
-        <p className={styles.sectionSubText}>Kontakt aufnehmen</p>
-        <h3 className={styles.sectionHeadText}>Kontakt<span className="text-amber-500">.</span></h3>
+    <div className='max-w-7xl mx-auto'>
+      <div className="flex-col flex gap-10 overflow-hidden">
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>Mehr erfahren?</p>
+          <h3 className={styles.sectionHeadText}>Kontakt</h3>
+        </motion.div>
 
-        <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
-          <label className="flex flex-col">
-            <input type="text" name="name" value={form.name} onChange={handleChange} className="px-4 py-3 bg-tertiary placeholder:text-secondary text-white rounded-lg outline-none border border-tertiary focus:border-amber-500" placeholder="Name" />
-          </label>
-          <label className="flex flex-col">
-            <input type="email" name="email" value={form.email} onChange={handleChange} className="px-4 py-3 bg-tertiary placeholder:text-secondary text-white rounded-lg outline-none border border-tertiary focus:border-amber-500" placeholder="Email" />
-          </label>
-          <label className="flex flex-col">
-            <textarea rows="7" name="message" value={form.message} onChange={handleChange} className="px-4 py-3 bg-tertiary placeholder:text-secondary text-white rounded-lg outline-none border border-tertiary focus:border-amber-500" placeholder="Nachricht" />
-          </label>
+        <motion.div variants={fadeIn('left', '', .2, .4)}
+                    className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+          <div className='text-center font-xl'>
+            <FontAwesomeIcon icon={solid('location-dot')} className='h-12 text-teal-500' />
+            <p className='pt-4 text-base'>Radeberg, Sachsen</p>
+          </div>
+          <div className='text-center font-xl'>
+            <FontAwesomeIcon icon={solid('envelope')} className='h-12 text-teal-500' />
+            <p className='pt-4 text-base'>contact@philippschurig.de</p>
+          </div>
+        </motion.div>
 
-          <button type="submit" className="px-4 py-2 bg-amber-600 hover:bg-amber-700 outline-none w-fit rounded-lg">
-            {loading ? 'Senden..' : 'Schicken'}
-          </button>
-        </form>
-      </motion.div>
+        <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
+                    className="contact-card flex flex-col w-full p-8 rounded-2xl" >
+          <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8">
+            <label className="flex flex-col">
+              <input type="text" name="name" value={form.name} onChange={handleChange} className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none" placeholder="Name" />
+            </label>
+            <label className="flex flex-col">
+              <input type="email" name="email" value={form.email} onChange={handleChange} className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none" placeholder="Email" />
+            </label>
+            <label className="flex flex-col">
+              <textarea rows="7" name="message" value={form.message} onChange={handleChange} className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none" placeholder="Nachricht" />
+            </label>
+
+            <button type="submit" className="bg-theme-gradient px-5 py-3 outline-none w-fit rounded-lg">
+              {loading ? 'Senden..' : 'Schicken'}
+            </button>
+          </form>
+        </motion.div>
+      </div>
     </div>
   )
 }
 
-export default SectionWrapper(Contact, 'contact')
+export default SectionWrapper(Contact, 'contact', 'bg-grey-800')

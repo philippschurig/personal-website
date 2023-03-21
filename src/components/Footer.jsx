@@ -6,8 +6,8 @@ const Footer = () => {
   }
 
   return (
-    <div className="flex justify-center text-center flex-col bg-slate-800 text-white p-12">
-      <SocialBar />
+    <div className="flex justify-center text-center flex-col bg-gray-900 text-white p-12">
+      <SocialBar hover={true} />
       <p className='mt-6'>Copyright © {currentYear()} by Philipp Schurig</p>
     </div>
   )

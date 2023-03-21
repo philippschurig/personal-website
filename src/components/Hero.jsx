@@ -6,21 +6,18 @@ import { profile } from '../assets'
 
 const Hero = () => {
   return (
-    <Element name="home" className="relative w-full h-screen mx-auto">
-      <div className={`${styles.paddingX} absolute inset-0 max-w-7xl mx-auto flex flex-col justify-center items-center gap-5`}>
-        <img src={profile} alt="profile" className="w-52 h-52 rounded-full profile" />
-
-        <div className="text-center">
-          <h1 className={`${styles.heroHeadText} text-white`}>Hi, ich bin <span className="text-amber-500">Philipp</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Ich programmiere Webanwendungen and Webseiten
-          </p>
+    <Element name="home" className="relative w-full h-screen mx-auto z-10">
+      <div className={`absolute inset-0 max-w-7xl mx-auto flex flex-col justify-center`}>
+        <div className="p-4 md:p-0">
+          <h1 className='text-white text-7xl lg:text-9xl font-light mb-6'>Hallo!</h1>
+          <h3 className='text-white text-3xl lg:text-7xl font-normal mb-4'>Ich bin <span className='font-bold'>Philipp Schurig</span></h3>
+          <p className='text-white text-2xl'>Full-Stack Entwickler</p>
         </div>
       </div>
 
-      <div className="absolute xs:bottom-10 bottom-8 w-full flex justify-center items-center">
-        <Link offset={-50} spy hashSpy to="about" className="cursor-pointer">
-          <div className="w-[35px] h-[64px] rounded-3xl border-2 border-amber-500 flex justify-center items-start p-2">
+      <div className="absolute xs:bottom-28 bottom-24 w-full flex justify-center items-center">
+        <Link offset={-60} spy hashSpy to="about" className="cursor-pointer">
+          <div className="w-[35px] h-[64px] rounded-3xl border-2 border-white-100 flex justify-center items-start p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0]
@@ -30,7 +27,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: 'loop'
               }}
-              className="w-3 h-3 rounded-full bg-amber-600 mb-1" />
+              className="w-3 h-3 rounded-full bg-white-100 mb-1" />
           </div>
         </Link>
       </div>
