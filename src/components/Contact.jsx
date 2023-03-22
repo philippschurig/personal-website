@@ -7,7 +7,7 @@ import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 import { styles } from '../styles.js'
 import { SectionWrapper } from '../hoc'
-import { slideIn, textVariant, fadeIn } from '../utils/motion.js'
+import { slideIn, textVariant } from '../utils/motion.js'
 
 const Contact = () => {
   const captchaRef = useRef(null)
@@ -85,7 +85,7 @@ const Contact = () => {
               <textarea rows="7" name="message" value={form.message} onChange={handleChange} className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none" placeholder="Nachricht" required />
             </label>
 
-            <ReCAPTCHA sitekey='6LcaWCElAAAAAI5o-gPgkdkZHCxRp4fWhCtOS3RP'
+            <ReCAPTCHA sitekey={import.meta.env.VITE_GOOGLE_CAPTCHA_KEY}
                        size="invisible"
                        ref={captchaRef}  />
 

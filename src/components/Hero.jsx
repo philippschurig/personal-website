@@ -1,16 +1,13 @@
 import { motion } from 'framer-motion'
 import { Element, Link } from 'react-scroll'
 
-import { styles } from '../styles'
-import { profile } from '../assets'
-
 const Hero = () => {
   return (
     <Element name="home" className="relative w-full h-screen mx-auto z-10">
       <div className={`absolute inset-0 max-w-7xl mx-auto flex flex-col justify-center`}>
         <div className="p-4 md:p-0">
           <h1 className='text-white text-7xl lg:text-9xl font-light mb-6'>Hallo!</h1>
-          <h3 className='text-white text-3xl lg:text-7xl font-normal mb-4'>Ich bin <span className='font-bold'>Philipp Schurig</span></h3>
+          <h2 className='text-white text-3xl lg:text-7xl font-normal mb-4'>Ich bin <span className='font-bold'>Philipp Schurig</span></h2>
           <p className='text-white text-2xl'>Full-Stack Entwickler</p>
         </div>
       </div>

@@ -4,8 +4,8 @@ import { fadeIn, slideIn, textVariant } from '../utils/motion'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
-import { styles } from "../styles";
-import React from "react";
+import { styles } from '../styles'
+import React from 'react'
 import { Link } from 'react-scroll'
 
 const Tech = () => {

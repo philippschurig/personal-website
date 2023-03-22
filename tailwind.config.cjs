@@ -22,7 +22,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/code_header.png')",
+        "hero-pattern": "url('/src/assets/code_header.webp')",
       },
     },
   },
