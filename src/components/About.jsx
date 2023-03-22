@@ -11,7 +11,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 const About = () => {
   return (
     <>
-      <div className='max-w-7xl mx-auto'>
+      <div className='max-w-7xl mx-auto overflow-hidden'>
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Wer bin ich?</p>
           <h2 className={styles.sectionHeadText}>Über mich</h2>
@@ -34,13 +34,13 @@ const About = () => {
             <motion.div variants={fadeIn("", "", 0.2, 1)} className='mt-8'>
               <ul className='list-none text-lg text-secondary'>
                 <li className='mb-3 font-light'>
-                  <span className='font-bold text-teal-500'>Name:</span> Philipp Schurig
+                  <span className='font-bold text-teal-500'>Name:</span> {import.meta.env.VITE_NAME}
                 </li>
                 <li className='mb-3 font-light'>
                   <span className='font-bold text-teal-500'>Geboren am:</span> 02. April 1993
                 </li>
                 <li className='font-light'>
-                  <span className='font-bold text-teal-500'>Email:</span> <a href='mailto:contact@philippschurig.de'>contact@philippschurig.de</a>
+                  <span className='font-bold text-teal-500'>Email:</span> <a href='mailto:contact@philippschurig.de'>{import.meta.env.VITE_EMAIL}</a>
                 </li>
               </ul>
             </motion.div>
@@ -50,7 +50,7 @@ const About = () => {
             <motion.a href="./cv/CV_2023.pdf"
                       download="Lebenslauf.pdf"
                       variants={fadeIn("", "", 0.2, 1)}
-                      className="block theme-nav-gradient mt-4 px-5 py-3 outline-none w-fit rounded-lg">
+                      className="btn-primary mt-4 px-6 py-4 outline-none w-fit rounded-lg">
               <FontAwesomeIcon icon={solid('cloud-arrow-down')}  className="mr-4"/>
               Download CV
             </motion.a>

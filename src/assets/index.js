@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./favicon/favicon.ico";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -16,10 +16,9 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import thinksurance from './company/thinksurance.png'
+import parkhotel from './company/logo-parkhotel-dresden.svg'
 import missyrockz from './company/missyrockz.png'
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
+import schlaf from './company/schlaf.png'
 
 import profile from "./profile.png"
 
@@ -40,9 +39,8 @@ export {
   tailwind,
   typescript,
   threejs,
-  thinksurance,
+  parkhotel,
   missyrockz,
-  meta,
-  shopify,
+  schlaf,
   profile,
 };

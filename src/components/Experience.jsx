@@ -37,7 +37,7 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   return (
-    <div className='max-w-7xl mx-auto'>
+    <div className='max-w-7xl mx-auto overflow-hidden'>
       <p className={styles.sectionSubText}>Was habe ich bisher gemacht?</p>
       <h2 className={styles.sectionHeadText}>Arbeitserfahrung</h2>
 

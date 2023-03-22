@@ -34,10 +34,12 @@ const Navbar = () => {
             <ul className="list-none flex justify-center items-center h-full flex-col gap-10">
               {navLinks.map((link) => (
                 <li key={link.id}>
-                  <Link activeClass="active" offset={-60} spy hashSpy to={link.id}
+                  <Link activeClass="active"
+                        offset={-60}
+                        spy
+                        to={link.id}
                         className='nav-link text-2xl font-medium cursor-pointer hover:text-teal-500 ease-in-out duration-300 cursor-pointer'
-                        onClick={() => setToggle(!toggle)}
-                  >
+                        onClick={() => setToggle(!toggle)}>
                     {link.title}
                   </Link>
                 </li>

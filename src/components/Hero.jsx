@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="absolute xs:bottom-28 bottom-24 w-full flex justify-center items-center">
-        <Link offset={-60} spy hashSpy to="about" className="cursor-pointer">
+        <Link offset={-60} spy to="about" className="cursor-pointer">
           <div className="w-[35px] h-[64px] rounded-3xl border-2 border-white-100 flex justify-center items-start p-2">
             <motion.div
               animate={{
