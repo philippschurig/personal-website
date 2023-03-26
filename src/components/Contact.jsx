@@ -62,7 +62,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='max-w-7x mx-auto overflow-hidden'>
+    <div className='max-w-7xl mx-auto overflow-hidden'>
       <div className="flex-col flex gap-10 overflow-hidden">
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Mehr erfahren?</p>

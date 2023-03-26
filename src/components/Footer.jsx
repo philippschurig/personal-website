@@ -1,6 +1,22 @@
 import { SocialBar, Modal } from '../hoc'
 import { useState } from 'react'
 import { styles } from '../styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+
+const ScrollTopButton = () => {
+  const scrollTop = () => {
+    window.scrollTo(0,0)
+  }
+
+  return (
+    <button type='button'
+            onClick={scrollTop}
+            className='block absolute bg-teal-500 rounded-xl h-12 w-12 right-6 lg:right-0 -top-6'>
+      <FontAwesomeIcon icon={solid('angles-up')} />
+    </button>
+  )
+}
 
 const Footer = () => {
   const [toggleDataProtection, setToggleDataProtection] = useState(false)
@@ -12,7 +28,8 @@ const Footer = () => {
 
   return (
     <>
-      <div className="flex justify-center text-center flex-col bg-gray-900 text-white p-12">
+      <div className="flex justify-center relative text-center flex-col bg-gray-900 text-white p-16 max-w-7xl mx-auto">
+        <ScrollTopButton />
         <SocialBar hover={true} />
         <div className='flex justify-center gap-4 mt-6'>
           <button type='button'
