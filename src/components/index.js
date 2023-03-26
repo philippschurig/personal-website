@@ -4,6 +4,7 @@ import About from './About'
 import Tech from './Tech'
 import Experience from './Experience'
 import Contact from './Contact'
+import SocialBar from '../hoc/SocialBar'
 import Footer from './Footer'
 
 export {
@@ -13,5 +14,6 @@ export {
   Tech,
   Experience,
   Contact,
+  SocialBar,
   Footer,
 }

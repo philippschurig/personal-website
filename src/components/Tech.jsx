@@ -40,16 +40,14 @@ const Tech = () => {
             und mehr ...
           </motion.span>
 
-          <div className='flex gap-4 mt-4'>
-            <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
-                        offset={-50}
-                        className='btn-primary px-6 py-4 outline-none w-fit rounded-lg'>
-              <Link offset={-60} spy to='contact' className='cursor-pointer'>
-                <FontAwesomeIcon icon={regular('envelope')}  className='mr-4' />
-                Kontaktiere mich
-              </Link>
-            </motion.div>
-          </div>
+          <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
+                      offset={-50}
+                      className='flex gap-4 mt-4'>
+            <Link offset={-60} spy to='contact' className='block btn-primary cursor-pointer px-6 py-4 outline-none w-fit rounded-lg'>
+              <FontAwesomeIcon icon={regular('envelope')}  className='mr-4' />
+              Kontaktiere mich
+            </Link>
+          </motion.div>
         </div>
       </div>
     </div>

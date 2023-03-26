@@ -13,6 +13,10 @@
   color-scheme: dark;
 }
 
+html, body {
+  @apply bg-gray-900;
+}
+
 .profile {
   box-shadow: 0 0 10px 5px #f59e0b;
 }
@@ -114,4 +118,18 @@
   background: rgba(255, 255, 255, .1);
 }
 
+#contact-form > div {
+  display: none;
+}
+
 .grecaptcha-badge { visibility: hidden; }
+
+.modal {
+  background: rgba(0, 0, 0, .9);
+  z-index: 999;
+  transition: all 0.4s ease-in-out;
+}
+
+.modal a {
+  @apply text-teal-500;
+}

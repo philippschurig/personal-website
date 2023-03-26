@@ -29,7 +29,7 @@ const Navbar = () => {
                className='w-[28px] h-[28px] object-contain cursor-pointer z-50'
                onClick={() => setToggle(!toggle)} />
 
-          <div className={`${!toggle ? 'inactive' : 'active' } p-6 fixed top-0 right-0 bottom-0 left-0`}>
+          <div className={`${!toggle ? 'inactive' : 'active'} p-6 fixed top-0 right-0 bottom-0 left-0`}>
             <img src={close} alt='close' onClick={() => setToggle(!toggle)} className='absolute right-10 w-10 h-10 object-contain cursor-pointer' />
             <ul className="list-none flex justify-center items-center h-full flex-col gap-10">
               {navLinks.map((link) => (

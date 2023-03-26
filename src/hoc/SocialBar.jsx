@@ -1,44 +1,23 @@
+import { socialmedia } from '../constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTwitter, faInstagram, faXing, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const SocialBar = ({hover = false}) => {
+library.add(faTwitter, faInstagram, faXing, faLinkedin, faGithub)
+
+const SocialBar = ({ hover = false }) => {
   return (
-    <div className="flex justify-center gap-4">
-      <a href='https://twitter.com/philipp_schurig'
-         target='_blank'
-         aria-label="Twitter"
-         className={`${hover ? 'hover:text-teal-500': ''} ease-in-out duration-300`}
-      >
-        <FontAwesomeIcon icon={brands('twitter')} size='lg' />
-      </a>
-      <a href='https://www.instagram.com/philipp_schurig/'
-         target='_blank'
-         aria-label="Instagram"
-         className={`${hover ? 'hover:text-teal-500': ''} ease-in-out duration-300`}
-      >
-        <FontAwesomeIcon icon={brands('instagram')} size='lg' />
-      </a>
-      <a href='https://www.xing.com/profile/Philipp_Schurig'
-         target='_blank'
-         aria-label="Xing"
-         className={`${hover ? 'hover:text-teal-500': ''} ease-in-out duration-300`}
-      >
-        <FontAwesomeIcon icon={brands('xing')} size='lg' />
-      </a>
-      <a href='https://www.linkedin.com/in/pschurig/'
-         target='_blank'
-         aria-label="LinkedIn"
-         className={`${hover ? 'hover:text-teal-500': ''} ease-in-out duration-300`}
-      >
-        <FontAwesomeIcon icon={brands('linkedin')} size='lg' />
-      </a>
-      <a href='https://github.com/philippschurig'
-         target='_blank'
-         aria-label="Github"
-         className={`${hover ? 'hover:text-teal-500': ''} ease-in-out duration-300`}
-      >
-        <FontAwesomeIcon icon={brands('github')} size='lg' />
-      </a>
+    <div className='flex justify-center gap-4'>
+      {socialmedia.map((socialmedia) => (
+        <a href={socialmedia.link}
+           target='_blank'
+           aria-label={socialmedia.name}
+           className={`${hover ? 'hover:text-teal-500': ''} ease-in-out duration-300`}
+           key={socialmedia.name}
+        >
+          <FontAwesomeIcon icon={`fa-brands ${socialmedia.icon}`} size='lg' />
+        </a>
+      ))}
     </div>
   )
 }

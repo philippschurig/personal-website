@@ -18,17 +18,28 @@ const About = () => {
         </motion.div>
 
         <div className='flex items-start flex-col md:flex-row w-full gap-4 mt-10'>
-          <motion.div variants={fadeIn("right", "", 0.2, 1)}
-                      className='relative mr-20 mt-10 about-img'>
-            <img src={profile} alt='Philipp Schurig' className='w-72' />
-          </motion.div>
+          <div>
+            <motion.div variants={fadeIn("right", "", 0.2, 1)}
+                        className='relative mr-20 mt-10 about-img'>
+              <img src={profile} alt='Philipp Schurig' className='w-72' />
+            </motion.div>
+
+            <motion.a href="./cv/CV_2023.pdf"
+                      download="Lebenslauf.pdf"
+                      variants={fadeIn("", "", 0.2, 1)}
+                      className="block btn-primary mt-12 px-6 py-4 outline-none w-fit rounded-lg">
+              <FontAwesomeIcon icon={solid('cloud-arrow-down')}  className="mr-4"/>
+              Download CV
+            </motion.a>
+          </div>
 
           <div className='overflow-hidden'>
             <motion.p variants={fadeIn("", "", 0.2, 1)}
                       className="text-secondary text-[17px] max-w-3xl leading-[30px]">
-              Meine Leidenschaft ist die Webentwicklung, speziell im Bereich Php und Javascript.
-              Ich konzipiere und entwickle Wep-Apps, REST API's sowie klassiche Webseiten und Portale.
-              Meinen Focus habe ich die letzten Jahre immer mehr auf Laravel und Vue oder React gelegt und damit einige Projekte aufgebaut, weiterentwickelt und betreut.
+              Ich bin ein begeisterter Fullstack-Entwickler mit einem Verständnis für die neuesten Webtechnologien.
+              Meine Leidenschaft gilt insbesondere der Entwicklung von Anwendungen mit Laravel und Vue.
+              Ich liebe es, komplexe Probleme zu lösen und innovative Lösungen zu entwickeln, die die Benutzererfahrung
+              verbessern und die Effizienz steigern.
             </motion.p>
 
             <motion.div variants={fadeIn("", "", 0.2, 1)} className='mt-8'>
@@ -46,14 +57,6 @@ const About = () => {
             </motion.div>
 
             <HobbyList />
-
-            <motion.a href="./cv/CV_2023.pdf"
-                      download="Lebenslauf.pdf"
-                      variants={fadeIn("", "", 0.2, 1)}
-                      className="btn-primary mt-4 px-6 py-4 outline-none w-fit rounded-lg">
-              <FontAwesomeIcon icon={solid('cloud-arrow-down')}  className="mr-4"/>
-              Download CV
-            </motion.a>
           </div>
         </div>
       </div>

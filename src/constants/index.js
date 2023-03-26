@@ -27,6 +27,34 @@ export const navLinks = [
   },
 ];
 
+const socialmedia = [
+  {
+    name: "Twitter",
+    icon: "fa-twitter",
+    link: "https://twitter.com/philipp_schurig",
+  },
+  {
+    name: "Instagram",
+    icon: "fa-instagram",
+    link: "https://www.instagram.com/philipp_schurig/",
+  },
+  {
+    name: "Xing",
+    icon: "fa-xing",
+    link: "https://www.xing.com/profile/Philipp_Schurig",
+  },
+  {
+    name: "LinkedIn",
+    icon: "fa-linkedin",
+    link: "https://www.linkedin.com/in/pschurig/",
+  },
+  {
+    name: "Github",
+    icon: "fa-github",
+    link: "https://github.com/philippschurig",
+  },
+]
+
 const technologies = [
   {
     name: "PHP 7/8",
@@ -100,4 +128,4 @@ const experiences = [
   },
 ];
 
-export { technologies, experiences };
+export { technologies, experiences, socialmedia };

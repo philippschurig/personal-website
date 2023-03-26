@@ -19,6 +19,7 @@ const Contact = () => {
   })
   const [loading, setLoading] = useState(false)
   const [submit, setSubmit] = useState(false)
+  const [error, setError] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -56,14 +57,12 @@ const Contact = () => {
         })
       }, (error) => {
         setLoading(false)
-        console.log(error)
-
-        alert('Etwas ist schief gelaufen.')
+        setError(true)
       })
   }
 
   return (
-    <div className='max-w-7xl mx-auto overflow-hidden'>
+    <div className='max-w-7x mx-auto overflow-hidden'>
       <div className="flex-col flex gap-10 overflow-hidden">
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Mehr erfahren?</p>
@@ -73,6 +72,7 @@ const Contact = () => {
         <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
                     className="contact-card flex flex-col w-full p-8 rounded-2xl overflow-hidden" >
           <div className={`${submit ? 'block' : 'hidden'} p-4 bg-teal-500 rounded-lg mb-8`}>Nachricht wurde gesendet.</div>
+          <div className={`${error ? 'block' : 'hidden'} p-4 bg-red-500 rounded-lg mb-8`}>Deine Nachricht konnte nicht gesendet werden.</div>
 
           <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8" id="contact-form">
             <label className="flex flex-col">
