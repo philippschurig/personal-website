@@ -76,13 +76,28 @@ const Contact = () => {
 
           <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8" id="contact-form">
             <label className="flex flex-col">
-              <input type="text" name="name" value={form.name} onChange={handleChange} className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none" placeholder="Name" required />
+              <input type="text"
+                     name="name"
+                     value={form.name}
+                     onChange={handleChange}
+                     className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none"
+                     placeholder="Name" required />
             </label>
             <label className="flex flex-col">
-              <input type="email" name="email" value={form.email} onChange={handleChange} className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none" placeholder="Email" required />
+              <input type="email"
+                     name="email"
+                     value={form.email}
+                     onChange={handleChange}
+                     className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none"
+                     placeholder="Email" required />
             </label>
             <label className="flex flex-col">
-              <textarea rows="7" name="message" value={form.message} onChange={handleChange} className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none" placeholder="Nachricht" required />
+              <textarea rows="7"
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none"
+                        placeholder="Nachricht" required />
             </label>
 
             <ReCAPTCHA sitekey={import.meta.env.VITE_GOOGLE_CAPTCHA_KEY}

@@ -27,7 +27,7 @@ const About = () => {
             <motion.a href="./cv/CV_2023.pdf"
                       download="Lebenslauf.pdf"
                       variants={fadeIn("", "", 0.2, 1)}
-                      className="block btn-primary mt-12 px-6 py-4 outline-none w-fit rounded-lg">
+                      className="block btn-primary mt-12 mx-auto px-6 py-4 outline-none w-fit rounded-lg">
               <FontAwesomeIcon icon={solid('cloud-arrow-down')}  className="mr-4"/>
               Download CV
             </motion.a>

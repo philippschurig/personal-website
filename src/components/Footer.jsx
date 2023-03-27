@@ -12,7 +12,7 @@ const ScrollTopButton = () => {
   return (
     <button type='button'
             onClick={scrollTop}
-            className='block absolute bg-teal-500 rounded-xl h-12 w-12 right-6 lg:right-0 -top-6'>
+            className='block absolute btn-primary rounded-xl h-12 w-12 right-6 lg:right-0 -top-6'>
       <FontAwesomeIcon icon={solid('angles-up')} />
     </button>
   )

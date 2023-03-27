@@ -240,10 +240,36 @@ html, body {
 
 .grecaptcha-badge { visibility: hidden; }
 
-.modal {
+.modal.active {
+  z-index: 1000;
+  visibility: visible;
   background: rgba(0, 0, 0, .9);
-  z-index: 999;
-  transition: all 0.4s ease-in-out;
+  transform: scale(1);
+  transition: all 0.1s ease-in-out;
+}
+
+.modal.inactive {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1000;
+  transition: all 0.2s ease-in-out 0.1s;
+  transform: scale(0.9);
+}
+
+.modal.active > div {
+  z-index: 1000;
+  visibility: visible;
+  background: rgba(0, 0, 0, .9);
+  transform: scale(1);
+  transition: all 0.2s ease-in-out 0.1s;
+}
+
+.modal.inactive > div {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1000;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.9);
 }
 
 .modal a {

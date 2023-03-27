@@ -39,15 +39,6 @@ const Tech = () => {
                        className='block font-semibold text-lg text-secondary'>
             und mehr ...
           </motion.span>
-
-          <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
-                      offset={-50}
-                      className='flex gap-4 mt-4'>
-            <Link offset={-60} spy to='contact' className='block btn-primary cursor-pointer px-6 py-4 outline-none w-fit rounded-lg'>
-              <FontAwesomeIcon icon={regular('envelope')}  className='mr-4' />
-              Kontaktiere mich
-            </Link>
-          </motion.div>
         </div>
       </div>
     </div>
