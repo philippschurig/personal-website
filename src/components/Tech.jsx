@@ -18,7 +18,7 @@ const Tech = () => {
           {technologies.map(technology => (
             <div key={`experience-point-${technology.name}`} className='flex justify-center relative tooltip'>
               <img src={technology.logo} alt={technology.name} className='block w-16' />
-              <span className='tooltip-text absolute top-full mt-2'>{technology.name}</span>
+              <span className='tooltip-text absolute top-full mt-2 z-50'>{technology.name}</span>
             </div>
           ))}
         </div>
