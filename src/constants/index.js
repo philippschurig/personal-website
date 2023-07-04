@@ -1,19 +1,17 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  parkhotel,
+  missyrockz,
+  schlaf,
+  php,
   javascript,
-  html,
-  reactjs,
-  tailwind,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-} from "../assets";
+  css,
+  laravel,
+  tailwindcss,
+  vue,
+  react
+} from "../assets"
 
-export const navLinks = [
+const navLinks = [
   {
     id: "home",
     title: "Startseite",
@@ -27,215 +25,132 @@ export const navLinks = [
     title: "Erfahrung",
   },
   {
+    id: "skills",
+    title: "Skills",
+  },
+  {
     id: "contact",
     title: "Kontakt",
   },
-];
+]
 
-const services = [
+const aboutMe = {
+  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  name: "Philipp Schurig",
+  birthdate: "02.04.1993",
+  email: "contact@philippschurig.de"
+}
+
+const socialMedia = [
   {
-    title: "Web Developer",
-    icon: web,
+    name: "Twitter",
+    icon: "fa-twitter",
+    link: "https://twitter.com/philipp_schurig",
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    name: "Instagram",
+    icon: "fa-instagram",
+    link: "https://www.instagram.com/philipp_schurig/",
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    name: "Xing",
+    icon: "fa-xing",
+    link: "https://www.xing.com/profile/Philipp_Schurig",
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    name: "LinkedIn",
+    icon: "fa-linkedin",
+    link: "https://www.linkedin.com/in/pschurig/",
   },
-];
+  {
+    name: "Github",
+    icon: "fa-github",
+    link: "https://github.com/philippschurig",
+  },
+]
 
 const technologies = [
   {
-    name: "PHP 7/8",
-    icon: html,
-    percent: 79,
+    name: "PHP",
+    logo: php,
     color: "#8993be",
   },
   {
-    name: "Laravel",
-    icon: html,
-    percent: 71,
+    name: "Javascript",
+    logo: javascript,
     color: "#fb503b",
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-    percent: 65,
+    name: "CSS",
+    logo: css,
     color: "#f0db4f",
   },
   {
-    name: "Vue 2/3",
-    icon: reactjs,
-    percent: 62,
+    name: "Laravel",
+    logo: laravel,
     color: "#42b883",
   },
   {
-    name: "React JS",
-    icon: reactjs,
-    percent: 35,
+    name: "Tailwind CSS",
+    logo: tailwindcss,
     color: "#1c84bc",
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-    percent: 57,
+    name: "Vue",
+    logo: vue,
     color: "#71c4f5",
   },
-];
+  {
+    name: "React",
+    logo: react,
+    color: "#71c4f5",
+  },
+]
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Web-Entwickler",
+    company_name: "Parkhotel Dresden",
+    icon: parkhotel,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Juni 2021 - August 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Entwicklung von Wordpress Plugins",
+      "Aufbau von Wordpress Webseiten",
+      "Planung von neuen Projekten"
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Web-Entwickler",
+    company_name: "MissyRockz",
+    icon: missyrockz,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "September 2021 - Juli 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Weiterentwicklung des Online-Shops auf Basis von Plentymarkets.",
+      "Koordinierung mit externen Dienstleistern und Entwicklern.",
+      "Entwicklung einer Headless Web-App auf Basis von Laravel und Vue zur Anbindung von externen Services mit Aufbau eines Zero Downtime Systems.",
+      "Entwicklung der Web-App mit REST Services an Plentymarkets und Mailchimp mit eigener Auswertungs Matrix",
     ],
   },
-];
+  {
+    title: "Krankheitsbedingte Auszeit",
+    company_name: "",
+    icon: schlaf,
+    iconBg: "#E6DEDD",
+    date: "September 2022 - Bis jetzt",
+    points: [
+      "Entwicklung eines Headless CMS Systems mit Laravel und Jetstream",
+      "Aufbau einer Webseite in React",
+      "Weiterbildung in Vue Composition API",
+    ],
+  },
+]
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
-const projects = [
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "",
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "",
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "",
-    source_code_link: "https://github.com/",
-  },
-];
-
-export { services, technologies, experiences, testimonials, projects };
+export {
+  navLinks,
+  aboutMe,
+  experiences,
+  technologies,
+  socialMedia
+}

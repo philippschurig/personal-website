@@ -1,17 +1,15 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 
 import { styles } from '../styles.js'
-import { motion } from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
 import { experiences } from '../constants'
-import { textVariant } from '../utils/motion'
 
 import { SectionWrapper } from '../hoc/'
 
 const ExperienceCard = ({ experience }) => {
   return (
-    <VerticalTimelineElement contentStyle={{ background: '#1d1836', color: '#fff' }}
-                             contentArrowStyle={{ borderRight: '7px solid #232631' }}
+    <VerticalTimelineElement contentStyle={{ background: '#111827', color: '#fff' }}
+                             contentArrowStyle={{ borderRight: '7px solid #111827' }}
                              date={experience.date}
                              iconStyle={{background: experience.iconBg}}
                              icon={
@@ -39,9 +37,9 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience = () => {
   return (
-    <>
+    <div className='max-w-7xl mx-auto overflow-hidden'>
       <p className={styles.sectionSubText}>Was habe ich bisher gemacht?</p>
-      <h2 className={styles.sectionHeadText}>Arbeitserfahrung<span className="text-amber-500">.</span></h2>
+      <h2 className={styles.sectionHeadText}>Arbeitserfahrung</h2>
 
       <div className="mt-10 flex flex-col">
         <VerticalTimeline>
@@ -50,8 +48,8 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </div>
   )
 }
 
-export default SectionWrapper(Experience, 'experience')
+export default SectionWrapper(Experience, 'experience', 'bg-grey-800')

@@ -1,34 +1,23 @@
+import { socialMedia } from '../constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTwitter, faInstagram, faXing, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const SocialBar = () => {
+library.add(faTwitter, faInstagram, faXing, faLinkedin, faGithub)
+
+const SocialBar = ({ hover = false }) => {
   return (
-    <div className="flex justify-center gap-4">
-      <a href='https://twitter.com/philipp_schurig'
-         target='_blank'
-         className='hover:text-amber-500 ease-in-out duration-300'>
-        <FontAwesomeIcon icon={brands('twitter')} />
-      </a>
-      <a href='https://www.instagram.com/philipp_schurig/'
-         target='_blank'
-         className='hover:text-amber-500 ease-in-out duration-300'>
-        <FontAwesomeIcon icon={brands('instagram')} />
-      </a>
-      <a href='https://www.xing.com/profile/Philipp_Schurig'
-         target='_blank'
-         className='hover:text-amber-500 ease-in-out duration-300'>
-        <FontAwesomeIcon icon={brands('xing')} />
-      </a>
-      <a href='https://www.linkedin.com/in/pschurig/'
-         target='_blank'
-         className='hover:text-amber-500 ease-in-out duration-300'>
-        <FontAwesomeIcon icon={brands('linkedin')} />
-      </a>
-      <a href='https://github.com/philippschurig'
-         target='_blank'
-         className='hover:text-amber-500 ease-in-out duration-300'>
-        <FontAwesomeIcon icon={brands('github')} />
-      </a>
+    <div className='flex justify-center gap-4'>
+      {socialMedia.map((socialMedia) => (
+        <a href={socialMedia.link}
+           target='_blank'
+           aria-label={socialMedia.name}
+           className={`${hover ? 'hover:text-teal-500': ''} ease-in-out duration-300`}
+           key={socialMedia.name}
+        >
+          <FontAwesomeIcon icon={`fa-brands ${socialMedia.icon}`} size='lg' />
+        </a>
+      ))}
     </div>
   )
 }

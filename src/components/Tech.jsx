@@ -1,55 +1,30 @@
 import { SectionWrapper } from '../hoc'
 import { technologies } from '../constants'
-import {fadeIn, slideIn, textVariant} from '../utils/motion'
+import { textVariant } from '../utils/motion'
 import { motion } from 'framer-motion'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { styles } from '../styles'
+import React from 'react'
 
 const Tech = () => {
   return (
-    <div className="flex flex-col">
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
-        {technologies.map((technology) => (
-          <div className='object-contain' key={technology.name}>
-            <motion.p variants={fadeIn("", "", 0.1, 1)}
-                      className="text-secondary text-[17px]">
-              {technology.name}
-            </motion.p>
+    <div className='max-w-7xl mx-auto overflow-hidden'>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Was kann ich?</p>
+        <h2 className={styles.sectionHeadText}>Meine Skills</h2>
+      </motion.div>
 
-            <div className="w-full mt-3 bg-slate-800 overflow-hidden rounded-full">
-              <motion.div variants={slideIn("left", "", 0.3, 1)}
-                          className="p-1 bg-secondary rounded-full"
-                          style={{width: technology.percent + '%', background: technology.color}} />
+      <div className='flex flex-col mt-10 overflow-hidden'>
+        <div className='grid grid-cols-3 md:grid-cols-7 gap-6 justify-center items-center pb-10'>
+          {technologies.map(technology => (
+            <div key={`experience-point-${technology.name}`} className='flex justify-center relative tooltip'>
+              <img src={technology.logo} alt={technology.name} className='block w-16' />
+              <span className='tooltip-text absolute top-full mt-2'>{technology.name}</span>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex flex-col items-start gap-6 mt-10">
-        <motion.span variants={textVariant()}
-                     className="block font-semibold text-lg text-secondary">
-          und mehr ...
-        </motion.span>
-
-        <div className="flex gap-4 mt-4">
-          <motion.a href="./cv/CV_2023.pdf"
-                    download="Lebenslauf.pdf"
-                    variants={textVariant()}
-                    className="block px-4 py-2 bg-amber-600 hover:bg-amber-700 outline-none w-fit rounded-lg">
-            <FontAwesomeIcon icon={solid('cloud-arrow-down')}  className="mr-4"/>
-            Download CV
-          </motion.a>
-
-          <motion.a href="#contact"
-                    variants={textVariant()}
-                    className="px-4 py-2 bg-amber-600 hover:bg-amber-700 outline-none w-fit rounded-lg">
-            <FontAwesomeIcon icon={regular('envelope')}  className="mr-4"/>
-            Kontaktiere mich
-          </motion.a>
+          ))}
         </div>
       </div>
     </div>
   )
 }
 
-export default SectionWrapper(Tech, "")
+export default SectionWrapper(Tech, 'skills')
