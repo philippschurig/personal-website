@@ -275,3 +275,11 @@ html, body {
 .modal a {
   @apply text-teal-500;
 }
+
+.tooltip .tooltip-text {
+  @apply opacity-0 transition-all duration-300 bg-gray-700 py-1 px-3 rounded-md text-sm;
+}
+
+.tooltip:hover .tooltip-text {
+  @apply opacity-100;
+}

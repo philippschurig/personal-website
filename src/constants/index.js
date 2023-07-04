@@ -2,9 +2,16 @@ import {
   parkhotel,
   missyrockz,
   schlaf,
-} from "../assets";
+  php,
+  javascript,
+  css,
+  laravel,
+  tailwindcss,
+  vue,
+  react
+} from "../assets"
 
-export const navLinks = [
+const navLinks = [
   {
     id: "home",
     title: "Startseite",
@@ -25,9 +32,16 @@ export const navLinks = [
     id: "contact",
     title: "Kontakt",
   },
-];
+]
 
-const socialmedia = [
+const aboutMe = {
+  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  name: "Philipp Schurig",
+  birthdate: "02.04.1993",
+  email: "contact@philippschurig.de"
+}
+
+const socialMedia = [
   {
     name: "Twitter",
     icon: "fa-twitter",
@@ -57,36 +71,41 @@ const socialmedia = [
 
 const technologies = [
   {
-    name: "PHP 7/8",
-    percent: 79,
+    name: "PHP",
+    logo: php,
     color: "#8993be",
   },
   {
-    name: "Laravel",
-    percent: 71,
+    name: "Javascript",
+    logo: javascript,
     color: "#fb503b",
   },
   {
-    name: "JavaScript",
-    percent: 65,
+    name: "CSS",
+    logo: css,
     color: "#f0db4f",
   },
   {
-    name: "Vue 2/3",
-    percent: 62,
+    name: "Laravel",
+    logo: laravel,
     color: "#42b883",
   },
   {
-    name: "React JS",
-    percent: 35,
+    name: "Tailwind CSS",
+    logo: tailwindcss,
     color: "#1c84bc",
   },
   {
-    name: "Tailwind CSS",
-    percent: 57,
+    name: "Vue",
+    logo: vue,
     color: "#71c4f5",
   },
-];
+  {
+    name: "React",
+    logo: react,
+    color: "#71c4f5",
+  },
+]
 
 const experiences = [
   {
@@ -126,6 +145,12 @@ const experiences = [
       "Weiterbildung in Vue Composition API",
     ],
   },
-];
+]
 
-export { technologies, experiences, socialmedia };
+export {
+  navLinks,
+  aboutMe,
+  experiences,
+  technologies,
+  socialMedia
+}

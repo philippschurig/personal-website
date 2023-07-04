@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 import { styles } from '../styles'
 import { profile } from '../assets'
+import { aboutMe } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 import { HobbyList, SectionWrapper } from '../hoc'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -21,7 +22,7 @@ const About = () => {
           <div>
             <motion.div variants={fadeIn("right", "", 0.2, 1)}
                         className='relative mr-20 mt-10 about-img'>
-              <img src={profile} alt='Philipp Schurig' className='w-72' />
+              <img src={ profile } alt='Philipp Schurig' className='w-72' />
             </motion.div>
 
             <motion.a href="./cv/CV_2023.pdf"
@@ -36,22 +37,19 @@ const About = () => {
           <div className='overflow-hidden'>
             <motion.p variants={fadeIn("", "", 0.2, 1)}
                       className="text-secondary text-[17px] max-w-3xl leading-[30px]">
-              Ich bin ein begeisterter Fullstack-Entwickler mit einem Verständnis für die neuesten Webtechnologien.
-              Meine Leidenschaft gilt insbesondere der Entwicklung von Anwendungen mit Laravel und Vue.
-              Ich liebe es, komplexe Probleme zu lösen und innovative Lösungen zu entwickeln, die die Benutzererfahrung
-              verbessern und die Effizienz steigern.
+              { aboutMe.description }
             </motion.p>
 
             <motion.div variants={fadeIn("", "", 0.2, 1)} className='mt-8'>
               <ul className='list-none text-lg text-secondary'>
                 <li className='mb-3 font-light'>
-                  <span className='font-bold text-teal-500'>Name:</span> {import.meta.env.VITE_NAME}
+                  <span className='font-bold text-teal-500'>Name:</span> { aboutMe.name }
                 </li>
                 <li className='mb-3 font-light'>
-                  <span className='font-bold text-teal-500'>Geboren am:</span> 02. April 1993
+                  <span className='font-bold text-teal-500'>Geboren am:</span> { aboutMe.birthdate }
                 </li>
                 <li className='font-light'>
-                  <span className='font-bold text-teal-500'>Email:</span> <a href='mailto:contact@philippschurig.de'>{import.meta.env.VITE_EMAIL}</a>
+                  <span className='font-bold text-teal-500'>Email:</span> <a href={`mailto:${aboutMe.email}`}>{ aboutMe.email }</a>
                 </li>
               </ul>
             </motion.div>
