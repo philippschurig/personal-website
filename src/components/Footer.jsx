@@ -22,13 +22,9 @@ const Footer = () => {
   const [toggleDataProtection, setToggleDataProtection] = useState(false)
   const [toggleImpress, setToggleImpress] = useState(false)
 
-  const currentYear = () => {
-    return new Date().getFullYear()
-  }
-
   return (
-    <>
-      <div className="flex justify-center relative text-center flex-col bg-gray-900 text-white p-16 max-w-7xl mx-auto">
+    <div className='bg-themeGrey-200'>
+      <div className="flex justify-center relative text-center flex-col text-white p-16 max-w-7xl mx-auto">
         <ScrollTopButton />
         <SocialBar hover={true} />
         <div className='flex justify-center gap-4 mt-6'>
@@ -43,7 +39,7 @@ const Footer = () => {
             Impressum
           </button>
         </div>
-        <p className='mt-6'>Copyright © {currentYear()} by Philipp Schurig</p>
+        <p className='mt-6'>Copyright © 2023 by Philipp Schurig</p>
       </div>
 
       <Modal onClose={() => setToggleDataProtection(false)} isShow={toggleDataProtection}>
@@ -214,7 +210,7 @@ const Footer = () => {
         <p className='mb-8'>Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
         <p><em>Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/">Impressums-Generator der activeMind AG</a> erstellt.</em></p>
       </Modal>
-    </>
+    </div>
   )
 }
 

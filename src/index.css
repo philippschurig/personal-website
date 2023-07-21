@@ -143,28 +143,8 @@ html, body {
   display: block;
 }
 
-.theme-nav-gradient {
-  background-image: linear-gradient(90deg,#14b8a6,#22c55e);
-  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.27);
-}
-
-.bg-theme-gradient {
-  background-image: linear-gradient(90deg,#14b8a6,#22c55e);
-}
-
 .btn-primary {
-  background-image: linear-gradient(90deg,#14b8a6,#22c55e);
   @apply block;
-}
-
-.btn-primary:hover {
-  background-image: linear-gradient(90deg,#22c55e,#14b8a6);
-}
-
-.text-gradient {
-  background-image: linear-gradient(90deg,#14b8a6,#22c55e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .about-img:after {
@@ -179,15 +159,11 @@ html, body {
   z-index: -1;
 }
 
-.menu > .inactive {
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1000;
-  transition: all 0.4s ease-in-out;
-  transform: scale(0.9);
+.menu ul a.active {
+  @apply bg-themeOrange-200;
 }
 
-.menu > .active {
+.mobile-menu > .active {
   z-index: 1000;
   visibility: visible;
   background: rgba(0, 0, 0, .9);
@@ -195,25 +171,46 @@ html, body {
   transition: all 0.4s ease-in-out;
 }
 
-.menu ul a.active {
-  @apply text-teal-500 hover:text-teal-500;
-}
-
-.hobby-container .description {
-  display: block;
-  text-align: center;
-  padding-top: .5rem;
-  visibility: hidden;
+.mobile-menu > .inactive {
   opacity: 0;
-  transform: scale(0.9);
+  visibility: hidden;
+  z-index: -1000;
   transition: all 0.4s ease-in-out;
+  transform: scale(0.9);
 }
 
-.hobby-container:hover .description {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
-  transition: all 0.4s ease-in-out;
+.mobile-menu ul a.active {
+  @apply text-themeOrange-500 hover:text-themeOrange-500;
+}
+
+.home-section::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid #f9744b;
+  border-left: 1px solid #f9744b;
+  @apply h-48 w-3/5 top-32 left-16 hidden lg:block;
+}
+
+.hero-down {
+  animation: fadeInDown 1.5s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typed-cursor {
+  @apply font-light;
 }
 
 .vertical-timeline::before {

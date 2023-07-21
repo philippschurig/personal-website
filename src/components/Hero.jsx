@@ -1,34 +1,49 @@
-import { motion } from 'framer-motion'
-import { Element, Link } from 'react-scroll'
+import { Link } from 'react-scroll'
+import { profile } from '../assets'
+import Typed from 'react-typed'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const Hero = () => {
   return (
-    <Element name="home" className="relative w-full h-screen mx-auto z-10">
-      <div className={`absolute inset-0 max-w-7xl mx-auto flex flex-col justify-center`}>
-        <div className="sm:px-16 px-6">
-          <h1 className='text-white text-7xl lg:text-9xl font-light mb-6'>Hallo!</h1>
-          <h2 className='text-white text-3xl md:text-5xl lg:text-7xl font-normal mb-4'>Ich bin <span className='font-bold'>Philipp Schurig</span></h2>
-          <p className='text-white text-2xl lg:text-3xl'>Full-Stack Entwickler</p>
-        </div>
-      </div>
+    <section id='home' className='h-screen w-screen relative bg-themeGrey-300 overflow-hidden'>
+      <div className='flex h-screen py-24'>
+        <div className='flex items-center flex-col-reverse lg:flex-row text-center lg:text-left lg:justify-between container my-auto mx-auto px-4 home-section'>
+          <div className='z-[1] mt-12 lg:mt-0'>
+            <p className='text-white text-6xl lg:text-6xl font-light mb-4'>Hallo!</p>
+            <h1 className='text-white font-light text-3xl md:text-5xl lg:text-6xl mb-4'>
+              Ich bin <Typed
+              strings={[
+                'Philipp Schurig',
+                'Webentwickler',
+                'Laravel Enthusiast'
+              ]}
+              typeSpeed={95}
+              backSpeed={50}
+              loop
+              className='font-bold text-themeOrange-100'>
+            </Typed>
+            </h1>
 
-      <div className="absolute bottom-24 w-full flex justify-center items-center">
-        <Link offset={-60} spy to="about" className="cursor-pointer">
-          <div className="w-[35px] h-[64px] rounded-3xl border-2 border-white-100 flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: 'loop'
-              }}
-              className="w-3 h-3 rounded-full bg-white-100 mb-1" />
+            <Link to='contact'
+                  offset={-50}
+                  spy
+                  className="block mx-auto lg:mx-0 mt-12 px-4 py-2 outline-none border border-themeOrange-100 w-fit transition-all ease-in-out duration-300 hover:bg-themeOrange-100 rounded-lg cursor-pointer">
+              <FontAwesomeIcon icon={solid('cloud-arrow-down')}  className="mr-4"/>
+              Kontaktiere mich
+            </Link>
           </div>
+          <img src={profile} alt='Philipp Schurig' className='mx-auto lg:mx-0 block w-72 shadow shadow-themeOrange-100 rounded' />
+        </div>
+
+        <Link to='about'
+              offset={-50}
+              spy
+              className='absolute bottom-6 left-1/2 cursor-pointer h-12 block mt-16'>
+          <FontAwesomeIcon icon={solid('chevron-down')}  className="text-2xl hero-down"/>
         </Link>
       </div>
-    </Element>
+    </section>
   )
 }
 

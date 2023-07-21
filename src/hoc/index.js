@@ -1,6 +1,6 @@
 import SectionWrapper from './SectionWrapper'
 import SocialBar from './SocialBar'
-import HobbyList from './HobbyList'
 import Modal from './Modal'
+import Typewriter from './Typewriter'
 
-export { SectionWrapper, SocialBar, HobbyList, Modal }
+export { SectionWrapper, SocialBar, Modal, Typewriter }

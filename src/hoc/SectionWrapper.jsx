@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 import { staggerContainer } from '../utils/motion'
 
-const SectionWrapper = (Component, idName, bgColor = 'bg-gray-900') =>
+const SectionWrapper = (Component, idName, bgColor = 'bg-themeGrey-200') =>
   function HOC() {
     return (
       <motion.section id={idName}
