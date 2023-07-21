@@ -37,7 +37,7 @@ const navLinks = [
 const aboutMe = {
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
   name: "Philipp Schurig",
-  birthdate: "02.04.1993",
+  age: "30",
   email: "contact@philippschurig.de"
 }
 
@@ -109,15 +109,15 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Web-Entwickler",
-    company_name: "Parkhotel Dresden",
-    icon: parkhotel,
+    title: "Krankheitsbedingte Auszeit",
+    company_name: "",
+    icon: schlaf,
     iconBg: "#E6DEDD",
-    date: "Juni 2021 - August 2021",
+    date: "September 2022",
     points: [
-      "Entwicklung von Wordpress Plugins",
-      "Aufbau von Wordpress Webseiten",
-      "Planung von neuen Projekten"
+      "Entwicklung eines Headless CMS Systems mit Laravel und Jetstream",
+      "Aufbau einer Webseite in React",
+      "Weiterbildung in Vue Composition API",
     ],
   },
   {
@@ -134,15 +134,15 @@ const experiences = [
     ],
   },
   {
-    title: "Krankheitsbedingte Auszeit",
-    company_name: "",
-    icon: schlaf,
+    title: "Web-Entwickler",
+    company_name: "Parkhotel Dresden",
+    icon: parkhotel,
     iconBg: "#E6DEDD",
-    date: "September 2022 - Bis jetzt",
+    date: "Juni 2021 - August 2021",
     points: [
-      "Entwicklung eines Headless CMS Systems mit Laravel und Jetstream",
-      "Aufbau einer Webseite in React",
-      "Weiterbildung in Vue Composition API",
+      "Entwicklung von Wordpress Plugins",
+      "Aufbau von Wordpress Webseiten",
+      "Planung von neuen Projekten"
     ],
   },
 ]

@@ -52,4 +52,4 @@ const Experience = () => {
   )
 }
 
-export default SectionWrapper(Experience, 'experience', 'bg-grey-800')
+export default SectionWrapper(Experience, 'experience', 'bg-themeGrey-100')

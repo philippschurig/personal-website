@@ -115,4 +115,4 @@ const Contact = () => {
   )
 }
 
-export default SectionWrapper(Contact, 'contact', 'bg-grey-800')
+export default SectionWrapper(Contact, 'contact', 'bg-themeGrey-100')
