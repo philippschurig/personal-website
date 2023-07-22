@@ -1,53 +1,54 @@
-import React from 'react'
-import { styles } from '../styles'
-import { profile } from '../assets'
 import { aboutMe } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+import parse from 'html-react-parser'
 
 const About = () => {
   return (
-    <>
-      <div className='max-w-7xl mx-auto overflow-hidden'>
+    <div className='max-w-7xl mx-auto px-4'>
+      <div className='relative flex justify-center text-center'>
+        <h2 className='section-head-text select-none'>Über mich</h2>
+        <p className='section-sub-text'>
+          Über Mich
+          <span className='border-b-4 border-themeOrange-100 px-3 mx-auto block w-24 rounded'></span>
+        </p>
+      </div>
+
+      <div className='flex items-start flex-col md:flex-row w-full gap-16 mt-16 overflow-hidden'>
         <div>
-          <p className={styles.sectionSubText}>Wer bin ich?</p>
-          <h2 className={styles.sectionHeadText}>Über mich</h2>
+          <p className="text-secondary text-[17px] max-w-3xl leading-[30px]">
+            <h3 className='text-3xl text-gray-200 font-semibold mb-4'>Ich bin <span className='text-themeOrange-100'>Philipp Schurig,</span></h3>
+            { parse(aboutMe.description) }
+          </p>
         </div>
 
-        <div className='flex items-start flex-col md:flex-row w-full gap-4 mt-10'>
-          <div>
-            <div className='relative mr-20 mt-10 about-img'>
-              <img src={ profile } alt='Philipp Schurig' className='w-72' />
-            </div>
-          </div>
+        <div className='flex-1'>
+          <ul className='list-none text-lg text-secondary'>
+            <li className='text-base py-2 text-gray-200 border-b border-gray-500'>
+              <span className='font-semibold mr-3'>Name:</span>{ aboutMe.name }
+            </li>
+            <li className='text-base py-2 text-gray-200 border-b border-gray-500'>
+              <span className='font-semibold mr-3'>Email:</span>
+              <a className='text-themeOrange-100 hover:text-themeOrange-300 font-light transition-all ease-in-out duration-100' href={`mailto:${aboutMe.email}`}>{ aboutMe.email }</a>
+            </li>
+            <li className='text-base py-2 text-gray-200 border-b border-gray-500'>
+              <span className='font-semibold mr-3'>Alter:</span>{ aboutMe.age }
+            </li>
+            <li className='text-base py-2 text-gray-200'>
+              <span className='font-semibold mr-3'>Aus:</span>{ aboutMe.location }
+            </li>
+          </ul>
 
-          <div className='overflow-hidden'>
-            <p className="text-secondary text-[17px] max-w-3xl leading-[30px]">
-              { aboutMe.description }
-            </p>
-
-            <div className='mt-6'>
-              <ul className='list-none text-lg text-secondary'>
-                <li className='mb-3 font-light'>
-                  Alter: <span className='text-gray-300 font-semibold'>{ aboutMe.age }</span>
-                </li>
-                <li className='font-light'>
-                  Email: <a className='text-gray-300 font-semibold hover:border-b border-green-500 transition-all ease-in-out duration-100' href={`mailto:${aboutMe.email}`}>{ aboutMe.email }</a>
-                </li>
-              </ul>
-
-              <a href="./cv/CV_2023.pdf"
-                 download="Lebenslauf.pdf"
-                 className="block mt-12 px-4 py-2 outline-none border border-green-500 bg-green-500 w-fit transition-all ease-in-out duration-300 hover:bg-gray-900 rounded-lg">
-                <FontAwesomeIcon icon={solid('cloud-arrow-down')}  className="mr-4"/>
-                Download CV
-              </a>
-            </div>
-          </div>
+          <a href="./cv/CV_2023.pdf"
+             download="Lebenslauf.pdf"
+             className="block mt-12 px-4 py-2 outline-none border border-themeOrange-100 w-fit transition-all ease-in-out duration-300 hover:bg-themeOrange-100 rounded-lg">
+            <FontAwesomeIcon icon={solid('cloud-arrow-down')}  className="mr-4"/>
+            Download CV
+          </a>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

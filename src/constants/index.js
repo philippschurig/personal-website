@@ -35,10 +35,11 @@ const navLinks = [
 ]
 
 const aboutMe = {
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  description: "ein Webentwickler aus Leidenschaft und konzipiere und entwickle Web-Applications, Webseiten und Online-Shops mit den neusten Technologien. Auf meinen beruflichen Stationen habe ich mit verschiedenen Web-Frameworks im Backend sowie im Frontend zu tun gehabt.<br><br> Das erstellen von REST-API´s ",
   name: "Philipp Schurig",
   age: "30",
-  email: "contact@philippschurig.de"
+  email: "contact@philippschurig.de",
+  location: "Radeberg, Sachsen"
 }
 
 const socialMedia = [

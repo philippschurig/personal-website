@@ -9,10 +9,10 @@ const App = () => {
       <Hero />
 
       <About />
-      <Experience />
-      <Tech/>
-      <Contact />
-      <Footer />
+      {/*<Experience />*/}
+      {/*<Tech/>*/}
+      {/*<Contact />*/}
+      {/*<Footer />*/}
     </HashRouter>
   )
 }

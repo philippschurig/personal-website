@@ -1,4 +1,3 @@
-import { styles } from '../styles'
 import { SocialBar } from '../hoc'
 
 const Maintenance = () => {

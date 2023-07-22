@@ -4,8 +4,6 @@ import emailjs from '@emailjs/browser'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
-
-import { styles } from '../styles.js'
 import { SectionWrapper } from '../hoc'
 import { slideIn, textVariant } from '../utils/motion.js'
 

@@ -1,8 +1,5 @@
 import { SectionWrapper } from '../hoc'
 import { technologies } from '../constants'
-import { textVariant } from '../utils/motion'
-import { motion } from 'framer-motion'
-import { styles } from '../styles'
 import React from 'react'
 
 const Tech = () => {

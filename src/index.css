@@ -147,16 +147,19 @@ html, body {
   @apply block;
 }
 
-.about-img:after {
-  display: block;
-  border: 6px solid #14b8a6;
-  content: "";
-  height: 100%;
-  left: 34px;
-  position: absolute;
-  top: -34px;
-  width: 100%;
-  z-index: -1;
+.hero-profile {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  @apply overflow-hidden w-72 h-72;
+}
+.hero-profile:after {
+  content: '';
+  background-image: url(./assets/profile.png);
+  background-position: center center;
+  background-size: contain;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  @apply absolute bottom-0 left-0 top-0 right-0;
 }
 
 .menu ul a.active {
@@ -183,14 +186,6 @@ html, body {
   @apply text-themeOrange-500 hover:text-themeOrange-500;
 }
 
-.home-section::before {
-  content: '';
-  position: absolute;
-  border-top: 1px solid #f9744b;
-  border-left: 1px solid #f9744b;
-  @apply h-48 w-3/5 top-32 left-16 hidden lg:block;
-}
-
 .hero-down {
   animation: fadeInDown 1.5s linear infinite;
   position: absolute;
@@ -209,8 +204,12 @@ html, body {
   }
 }
 
-.typed-cursor {
-  @apply font-light;
+.section-head-text {
+  @apply text-themeGrey-100 inline text-6xl lg:text-9xl uppercase opacity-50 font-bold;
+}
+
+.section-sub-text {
+  @apply absolute self-center text-gray-200 text-3xl lg:text-5xl font-semibold;
 }
 
 .vertical-timeline::before {

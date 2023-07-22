@@ -1,6 +1,5 @@
 import { SocialBar, Modal } from '../hoc'
 import { useState } from 'react'
-import { styles } from '../styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
@@ -43,7 +42,7 @@ const Footer = () => {
       </div>
 
       <Modal onClose={() => setToggleDataProtection(false)} isShow={toggleDataProtection}>
-        <h1 className={`${styles.sectionHeadText}`}>Datenschutz&shy;erkl&auml;rung</h1>
+        <h1 className='section-head-text'>Datenschutz&shy;erkl&auml;rung</h1>
         <h2 className='text-2xl text-gray-400 mb-4'>1. Datenschutz auf einen Blick</h2>
         <h3 className={`${styles.sectionSubText} mb-3`}>Allgemeine Hinweise</h3>
         <p className='mb-6'>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.</p>

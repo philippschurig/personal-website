@@ -18,9 +18,11 @@ const Navbar = () => {
   window.addEventListener('scroll', changeColor)
 
   return (
-    <header className={`${color ? 'bg-themeOrange-400 shadow-2xl' : ''}fixed top-0 left-0 right-0 z-[999]`}>
-      <nav className='container mx-auto flex items-center justify-between py-5 lg:py-3 px-4'>
-        <a href='#' className={`${color ? 'text-white' : 'text-themeOrange-100'} block text-2xl font-semibold`}>Philipp</a>
+    <header className={`${color ? 'bg-themeOrange-400 shadow-2xl' : 'bg-themeOrange-200 lg:bg-inherit'} fixed top-0 left-0 right-0 z-[999]`}>
+      <nav className='container mx-auto flex items-center justify-between py-3 lg:py-3 px-4'>
+        <Link to='home' className={`${color ? 'text-white' : 'text-white lg:text-themeOrange-100'} block text-2xl font-semibold cursor-pointer`}>
+          Philipp
+        </Link>
 
         <div className='menu hidden md:flex'>
           <ul className="list-none flex justify-center items-center h-full gap-1">
