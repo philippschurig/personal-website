@@ -1,6 +1,7 @@
 import { HashRouter } from 'react-router-dom'
 
-import { About, Contact, Experience, Hero, Navbar, Tech, Footer } from './components'
+import { About, Contact, Hero, Navbar, Footer } from './components'
+import { SocialBar } from './components'
 
 const App = () => {
   return (
@@ -9,10 +10,10 @@ const App = () => {
       <Hero />
 
       <About />
-      <Experience />
-      <Tech/>
       <Contact />
       <Footer />
+
+      <SocialBar />
     </HashRouter>
   )
 }

@@ -4,8 +4,6 @@ import emailjs from '@emailjs/browser'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { regular } from '@fortawesome/fontawesome-svg-core/import.macro'
-
-import { styles } from '../styles.js'
 import { SectionWrapper } from '../hoc'
 import { slideIn, textVariant } from '../utils/motion.js'
 
@@ -62,57 +60,54 @@ const Contact = () => {
   }
 
   return (
-    <div className='max-w-7xl mx-auto overflow-hidden'>
-      <div className="flex-col flex gap-10 overflow-hidden">
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>Mehr erfahren?</p>
-          <h3 className={styles.sectionHeadText}>Kontakt</h3>
-        </motion.div>
+    <div className='flex justify-center'>
+      <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8 w-full md:w-3/4" id="contact-form">
+        <p className={`${submit ? 'block' : 'hidden'} p-4 bg-teal-500 rounded-lg mb-8`}>Nachricht wurde gesendet.</p>
+        <p className={`${error ? 'block' : 'hidden'} p-4 bg-red-500 rounded-lg mb-8`}>Deine Nachricht konnte nicht gesendet werden.</p>
 
-        <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
-                    className="contact-card flex flex-col w-full p-8 rounded-2xl overflow-hidden" >
-          <div className={`${submit ? 'block' : 'hidden'} p-4 bg-teal-500 rounded-lg mb-8`}>Nachricht wurde gesendet.</div>
-          <div className={`${error ? 'block' : 'hidden'} p-4 bg-red-500 rounded-lg mb-8`}>Deine Nachricht konnte nicht gesendet werden.</div>
+        <div className='flex flex-col md:flex-row md:justify-between gap-6'>
+          <label className="flex flex-col w-full">
+            <input type="text"
+                   name="name"
+                   value={form.name}
+                   onChange={handleChange}
+                   className="px-4 py-3 bg-themeGrey-400 border border-themeGrey-400 focus:border-themeOrange-100 placeholder:text-secondary text-white rounded-lg outline-none"
+                   placeholder="Name"
+                   required />
+          </label>
+          <label className="flex flex-col w-full">
+            <input type="email"
+                   name="email"
+                   value={form.email}
+                   onChange={handleChange}
+                   className="px-4 py-3 bg-themeGrey-400 border border-themeGrey-400 focus:border-themeOrange-100 placeholder:text-secondary text-white rounded-lg outline-none"
+                   placeholder="Email"
+                   required />
+          </label>
+        </div>
 
-          <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8" id="contact-form">
-            <label className="flex flex-col">
-              <input type="text"
-                     name="name"
-                     value={form.name}
-                     onChange={handleChange}
-                     className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none"
-                     placeholder="Name" required />
-            </label>
-            <label className="flex flex-col">
-              <input type="email"
-                     name="email"
-                     value={form.email}
-                     onChange={handleChange}
-                     className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none"
-                     placeholder="Email" required />
-            </label>
-            <label className="flex flex-col">
+        <label className="flex flex-col w-full">
               <textarea rows="7"
                         name="message"
                         value={form.message}
                         onChange={handleChange}
-                        className="px-4 py-3 bg-gray-800 placeholder:text-secondary text-white rounded-lg outline-none"
-                        placeholder="Nachricht" required />
-            </label>
+                        className="w-full px-4 py-3 bg-themeGrey-400 placeholder:text-secondary border border-themeGrey-400 focus:border-themeOrange-100 text-white rounded-lg outline-none"
+                        placeholder="Nachricht"
+                        required />
+        </label>
 
-            <ReCAPTCHA sitekey={import.meta.env.VITE_GOOGLE_CAPTCHA_KEY}
-                       size="invisible"
-                       ref={captchaRef}  />
+        <ReCAPTCHA sitekey={import.meta.env.VITE_GOOGLE_CAPTCHA_KEY}
+                   size="invisible"
+                   className='hidden'
+                   ref={captchaRef}  />
 
-            <button type="submit" className="btn-primary px-6 py-4 outline-none w-fit rounded-lg">
-              <FontAwesomeIcon icon={regular('paper-plane')}  className="mr-4"/>
-              {loading ? 'Senden..' : 'Schicken'}
-            </button>
-          </form>
-        </motion.div>
-      </div>
+        <button type="submit" className="self-end px-4 py-2 outline-none border border-themeOrange-100 w-fit transition-all ease-in-out duration-300 hover:bg-themeOrange-100 rounded-lg">
+          <FontAwesomeIcon icon={regular('paper-plane')}  className="mr-4"/>
+          {loading ? 'Senden..' : 'Absenden'}
+        </button>
+      </form>
     </div>
   )
 }
 
-export default SectionWrapper(Contact, 'contact', 'bg-themeGrey-100')
+export default SectionWrapper(Contact, 'contact', 'Kontakt', 'Hast du eine Frage?', 'bg-themeGrey-100')
