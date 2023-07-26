@@ -130,7 +130,7 @@
 }
 
 html, body {
-  @apply bg-gray-900;
+  @apply bg-themeGrey-300;
 }
 
 .profile {
@@ -143,14 +143,10 @@ html, body {
   display: block;
 }
 
-.btn-primary {
-  @apply block;
-}
-
 .hero-profile {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  @apply overflow-hidden w-72 h-72;
+  @apply overflow-hidden w-44 h-44 lg:w-72 lg:h-72;
 }
 .hero-profile:after {
   content: '';
@@ -205,15 +201,19 @@ html, body {
 }
 
 .section-head-text {
-  @apply text-themeGrey-100 inline text-6xl lg:text-9xl uppercase opacity-50 font-bold;
+  @apply inline text-6xl lg:text-9xl uppercase opacity-5 font-bold;
 }
 
 .section-sub-text {
-  @apply absolute self-center text-gray-200 text-3xl lg:text-5xl font-semibold;
+  @apply absolute self-center text-white text-3xl lg:text-5xl font-semibold;
 }
 
 .vertical-timeline::before {
   @apply bg-teal-500;
+}
+
+.btn-scroll-top {
+  transform: translate(-50%, 0);
 }
 
 .vertical-timeline-element-icon {
@@ -230,7 +230,7 @@ html, body {
   background: rgba(255, 255, 255, .1);
 }
 
-#contact-form > div {
+#contact-form > p {
   display: none;
 }
 

@@ -1,4 +1,4 @@
-import { SocialBar } from '../hoc'
+// import { SocialBar } from '../hoc'
 
 const Maintenance = () => {
   return (
@@ -7,7 +7,7 @@ const Maintenance = () => {
         <h1 className='text-white text-4xl lg:text-7xl font-light mb-6 uppercase'>Bald verfügbar!</h1>
         <h2 className='text-white lg:text-4xl font-light mb-4'>Folge mir auf Social Media</h2>
         <div className='mt-12'>
-          <SocialBar />
+          {/*<SocialBar />*/}
         </div>
       </div>
     </div>

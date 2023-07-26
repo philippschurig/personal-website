@@ -21,21 +21,13 @@ const navLinks = [
     title: "Über mich",
   },
   {
-    id: "experience",
-    title: "Erfahrung",
-  },
-  {
-    id: "skills",
-    title: "Skills",
-  },
-  {
     id: "contact",
     title: "Kontakt",
   },
 ]
 
 const aboutMe = {
-  description: "ein Webentwickler aus Leidenschaft und konzipiere und entwickle Web-Applications, Webseiten und Online-Shops mit den neusten Technologien. Auf meinen beruflichen Stationen habe ich mit verschiedenen Web-Frameworks im Backend sowie im Frontend zu tun gehabt.<br><br> Das erstellen von REST-API´s ",
+  description: "ein Webentwickler mit +5 Jahren Erfahrung im Bereich Backend/Frontend-Entwicklung. Ich bin immer an den neuesten Trends und Technologien interessiert und experimentiere viel herum. Das Lösen von komplexen Problemen und das kreative Arbeiten sind etwas, das mich schon in meiner frühen Jugend in dem Bereich interessiert hat und es noch immer tut.<br>Wenn ich mal nicht arbeite, lerne ich neue Programmiersprachen oder genieße Filme/Serien und beschäftige mich mit Musikproduktion.",
   name: "Philipp Schurig",
   age: "30",
   email: "contact@philippschurig.de",
@@ -47,11 +39,6 @@ const socialMedia = [
     name: "Twitter",
     icon: "fa-twitter",
     link: "https://twitter.com/philipp_schurig",
-  },
-  {
-    name: "Instagram",
-    icon: "fa-instagram",
-    link: "https://www.instagram.com/philipp_schurig/",
   },
   {
     name: "Xing",
